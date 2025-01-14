@@ -1,4 +1,11 @@
 import calculations
+from Great import greeting as greet
+from Great import person
+
+print(person["Name"])
+greet("Sankar")
+
+print(dir(calculations))
 
 x = int(input("Enter the value of x: "))
 y = int(input("Enter the value of y: "))
