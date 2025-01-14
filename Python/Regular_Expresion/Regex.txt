@@ -1,0 +1,60 @@
+A regular expression (regex) is a sequence of characters that define a search pattern. It is used for string matching and manipulation. 
+Regular expressions are used in various programming languages and tools to search, edit, and manipulate text based on specific patterns.
+
+Why use regular expressions?
+1. Pattern Matching: Regex allows you to search for specific patterns within text.
+2. Text Manipulation: Regex can be used to replace or modify text based on patterns.
+3. Data Validation: Regex is often used to validate input data, such as email addresses, phone numbers, etc.
+4. Efficiency: Regex can perform complex searches and modifications efficiently.
+
+Basic Syntax:
+1. Literal Characters: Matches the exact characters in the pattern.
+    Example: `abc` matches "abc".
+
+2. Metacharacters: Characters with special meanings.
+    Example: `.` matches any single character except newline.
+
+3. Character Classes: Matches any one of a set of characters.
+    Example: `[abc]` matches "a", "b", or "c".
+
+4. Quantifiers: Specifies how many times a character or group should be matched.
+    Example: `a*` matches zero or more "a" characters.
+
+5. Anchors: Specifies the position in the string.
+    Example: `^` matches the start of a string, `$` matches the end.
+
+Examples:
+1. Matching an Email Address:
+    Pattern: `^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$`
+    Explanation: This pattern matches a typical email address format.
+
+2. Matching a Phone Number:
+    Pattern: `^\(\d{3}\) \d{3}-\d{4}$`
+    Explanation: This pattern matches a phone number in the format (123) 456-7890.
+
+3. Replacing Text:
+    Example: Replacing all occurrences of "cat" with "dog" in a string.
+    Code:
+    ```python
+    import re
+    text = "The cat sat on the cat mat."
+    new_text = re.sub(r'cat', 'dog', text)
+    print(new_text)  # Output: The dog sat on the dog mat.
+    ```
+
+4. Validating Input:
+    Example: Validating if a string is a valid IP address.
+    Pattern: `^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$`
+    Explanation: This pattern matches a valid IPv4 address.
+
+5. Extracting Data:
+    Example: Extracting all numbers from a string.
+    Code:
+    ```python
+    import re
+    text = "There are 123 apples and 456 oranges."
+    numbers = re.findall(r'\d+', text)
+    print(numbers)  # Output: ['123', '456']
+    ```
+
+These examples and explanations should help you understand the basics and applications of regular expressions.
