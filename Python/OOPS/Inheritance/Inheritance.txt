@@ -1,0 +1,9 @@
+Inheritance allows a class to reuse the code from another class.
+
+This is like "inheriting" something from your parents. Imagine you got your mom’s hair color and your dad’s height.
+In programming, inheritance means a new class can use the properties and methods of an existing class.
+
+Example:
+There’s a class called Animal.
+A class Dog can inherit from Animal, so it will already have properties like "can walk" or "can eat."
+The Dog class can also have its own unique features like "bark."
